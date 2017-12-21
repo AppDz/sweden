@@ -1,0 +1,88 @@
+<ion-side-menus enable-menu-with-back-views="false">
+	<ion-side-menu-content>
+		<ion-nav-bar ng-show="$root.headerExists" id="navbar-left-top" class="page-title bar-positive">
+			<ion-nav-back-button></ion-nav-back-button>
+			<ion-nav-buttons side="right">
+				<button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+			</ion-nav-buttons>
+		</ion-nav-bar>
+		<ion-nav-view name="fabButtonUp"></ion-nav-view>
+		<ion-nav-view animation="none" name="sweeden-side_menus"></ion-nav-view>
+	</ion-side-menu-content>
+	<ion-side-menu side="right">
+		<ion-header-bar class="text-center expanded positive-bg">
+			<img ng-src="{{ appLogo | trustUrl }}" class="avatar motion spin fade" />
+			<div class="menu-bottom"><span ng-bind-html="appName | strHTML"></span><br/></div>
+		</ion-header-bar>
+		<ion-content class="has-expanded-header transparent-bg energized-900">
+			<ion-list class="list" >
+				<ion-item class="item item-divider text-right" >
+					 {{ "الرئيسية" | translate }}
+				</ion-item>
+				<ion-item  class="menu-whysweeden item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.whysweeden">
+					<i class="icon ion-android-favorite"></i> {{ "لماذا السويد؟" | translate }}
+				</ion-item>
+				<ion-item  class="menu-ways2sweden item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.ways2sweden">
+					<i class="icon ion-arrow-expand"></i> {{ "طرق الهجرة" | translate }}
+				</ion-item>
+				<ion-item class="item item-divider text-right" >
+					 {{ "الدراسة" | translate }}
+				</ion-item>
+				<ion-item  class="menu-edu1 item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.edu1">
+					<i class="icon ion-ios-briefcase-outline"></i> {{ "مميزات الدراسة" | translate }}
+				</ion-item>
+				<ion-item  class="menu-feesedu item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.feesedu">
+					<i class="icon ion-social-buffer"></i> {{ "الرسوم" | translate }}
+				</ion-item>
+				<ion-item  class="menu-scholarprogram item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.scholarprogram">
+					<i class="icon ion-ios-albums"></i> {{ "المقرر الاكاديمي" | translate }}
+				</ion-item>
+				<ion-item  class="menu-campus item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.campus">
+					<i class="icon ion-ios-home"></i> {{ "المعيشة" | translate }}
+				</ion-item>
+				<ion-item  class="menu-scholarships item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.scholarships">
+					<i class="icon ion-social-usd"></i> {{ "المنح الدراسية" | translate }}
+				</ion-item>
+				<ion-item class="item item-divider text-right" >
+					 {{ "العمل" | translate }}
+				</ion-item>
+				<ion-item  class="menu-hosolwork item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.hosolwork">
+					<i class="icon ion-android-clipboard"></i> {{ "الحصول على العمل" | translate }}
+				</ion-item>
+				<ion-item  class="menu-permitwork item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.permitwork">
+					<i class="icon ion-ios-compose"></i> {{ "تصريح العمل" | translate }}
+				</ion-item>
+				<ion-item  class="menu-passportwork item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.passportwork">
+					<i class="icon ion-ios-paper"></i> {{ "جواز السفر" | translate }}
+				</ion-item>
+				<ion-item  class="menu-demandejob item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.demandejob">
+					<i class="icon ion-android-list"></i> {{ "طريقة تقديم الطلب" | translate }}
+				</ion-item>
+				<ion-item  class="menu-paperswork item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.paperswork">
+					<i class="icon ion-ios-printer"></i> {{ "الوثائق اللازمة" | translate }}
+				</ion-item>
+				<ion-item class="item item-divider text-right" >
+					 {{ "القيادة" | translate }}
+				</ion-item>
+				<ion-item  class="menu-drive1step item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.drive1step">
+					<i class="icon ion-checkmark"></i> {{ "الخطوات الأولى" | translate }}
+				</ion-item>
+				<ion-item  class="menu-driveschools item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.driveschools">
+					<i class="icon ion-checkmark"></i> {{ "مدارس السياقة" | translate }}
+				</ion-item>
+				<ion-item class="item item-divider text-right" >
+					 {{ "متفرقات" | translate }}
+				</ion-item>
+				<ion-item  class="menu-refugesweeden item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.refugesweeden">
+					<i class="icon ion-person"></i> {{ "اللجوء" | translate }}
+				</ion-item>
+				<ion-item  class="menu-medical item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ui-sref="sweeden.medical">
+					<i class="icon ion-happy-outline"></i> {{ "الرعاية الطبية" | translate }}
+				</ion-item>
+				<ion-item  class="menu-rateus item-sidebar item item-icon-right text-right dark-ink" nav-clear="" menu-close="" ng-click="openURL('market://details?id=com.clabsing.sweedeen')">
+					<i class="icon ion-android-playstore"></i> {{ "قيمنا" | translate }}
+				</ion-item>
+			</ion-list>
+		</ion-content>
+	</ion-side-menu>
+</ion-side-menus>
